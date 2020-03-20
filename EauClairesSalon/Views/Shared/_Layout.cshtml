@@ -17,27 +17,35 @@
     <link rel="stylesheet" href="~/css/styles.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">
-        Eau Claire's Salon
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/Stylists">Stylists</a>
-          </li>
-        </ul>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--colored">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Eau Claire's Salon</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="/">Home</a>
+            <a class="mdl-navigation__link" href="/Stylists">Stylists</a>
+            <a class="mdl-navigation__link" href="/Stylists/Create">Add Stylist</a>
+            <a class="mdl-navigation__link" href="/Clients">Clients</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="/">Home</a>
+          <a class="mdl-navigation__link" href="/Stylists">Stylists</a>
+          <a class="mdl-navigation__link" href="/Stylists/Create">Add Stylist</a>
+          <a class="mdl-navigation__link" href="/Clients">Clients</a>
+        </nav>
       </div>
-    </nav>
-    <div class="container-fluid">
-      @RenderBody()
+      <main class="mdl-layout__content">
+      </main>
     </div>
+    @RenderBody()
     @Html.Partial("Footer")
   </body>
 </html>
