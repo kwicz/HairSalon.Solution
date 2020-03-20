@@ -55,20 +55,20 @@ mysql -uroot -p<your_password_here>
 ```
 * Once in MySQL, create a database for storing project data:
 ```sh
-CREATE DATABASE `hair_salon`;
+CREATE DATABASE `k_wicz`;
 ```
 * Create a table in hair_salon for storing stylist data:
 ```sh
-CREATE TABLE `hair_salon`.`stylists` (
+CREATE TABLE `k_wicz`.`stylists` (
   `stylistid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
-  `hiredate` DATETIME NULL,
+  `hiredate` VARCHAR(45) NULL,
   `speciality` VARCHAR(45) NULL,
   PRIMARY KEY (`stylistid`));
 ```
 * Create a table in hair_salon for storing client data:
 ```sh
-CREATE TABLE `hair_salon`.`clients` (
+CREATE TABLE `k_wicz`.`clients` (
   `clientid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `notes` VARCHAR(255) NULL,
