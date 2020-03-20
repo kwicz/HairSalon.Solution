@@ -59,20 +59,20 @@ CREATE DATABASE `hair_salon`;
 ```
 * Create a table in hair_salon for storing stylist data:
 ```sh
-CREATE TABLE `stylists` (
-  `stylistid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `hire_date` datetime DEFAULT NULL,
-  `speciality` varchar(255) DEFAULT NULL,
+CREATE TABLE `hair_salon`.`stylists` (
+  `stylistid` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `hire_date` DATETIME NULL,
+  `speciality` VARCHAR(45) NULL,
   PRIMARY KEY (`stylistid`));
 ```
 * Create a table in hair_salon for storing client data:
 ```sh
-CREATE TABLE `clients` (
-  `clientid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) DEFAULT NULL,
-  `notes` varchar(255) DEFAULT NULL,
-  `stylistid` int(11) DEFAULT '0',
+CREATE TABLE `hair_salon`.`clients` (
+  `clientid` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NULL,
+  `notes` VARCHAR(255) NULL,
+  `stylistid` INT NULL DEFAULT 0,
   PRIMARY KEY (`clientid`));
 ```
 ### 4. Launch the project
