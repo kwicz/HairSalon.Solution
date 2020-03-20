@@ -2,5 +2,28 @@
   Layout = "_Layout";
 }
 
+<div class="jumbotron">
+  <h1 class=splash-page-header>Welcome to Eau Claire's Salon!</h1>
+  <h2>An administrative site to manage your salon.</h2>
+</div>
 
-Welcome!
+
+<div class="button-parent">
+  <div class="button-group">
+  
+  <div class="form-group w-50" id="search">
+  @using (Html.BeginForm("Search","Stylists")) {
+  <input type="text" name="search" class="form-control form-control-lg"/>
+  <br>
+  <input type="submit" value="Search Stylists" class="btn btn-success my-2 my-sm-0">
+  }
+</div>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">@Html.ActionLink("See all stylists", "Index", "Stylists")</button>
+    <button class="btn btn-info">@Html.ActionLink("Add a new stylists", "Create", "Stylists")</button>
+    <button class="btn btn-info">@Html.ActionLink("See all Clients", "Index", "Clients")</button>
+  </div>
+</div>    
+
+@* <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">  <span class="mdc-button__ripple"></span>@Html.ActionLink("See all stylists", "Index", "Stylists")</button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">  <span class="mdc-button__ripple"></span>@Html.ActionLink("Add a new stylists", "Create", "Stylists")</button>
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">  <span class="mdc-button__ripple"></span>@Html.ActionLink("See all Clients", "Index", "Clients")</button> *@

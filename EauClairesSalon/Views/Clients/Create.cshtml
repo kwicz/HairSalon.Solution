@@ -11,9 +11,9 @@
         <h4>Add a new client</h4>
         @using (Html.BeginForm())
         {
-          <div class="form-group">
-            @Html.LabelFor(model => model.Name)
-            @Html.TextBoxFor(model => model.Name, new{ @class="form-control"})
+          <div class="mdc-text-field">
+            @Html.LabelFor(model => model.Name, new{ @class="mdc-text-field"})
+            @Html.TextBoxFor(model => model.Name, new{ @class="mdc-text-field__input"})
           </div>
           <div class="form-group">
             @Html.LabelFor(model => model.Notes)
