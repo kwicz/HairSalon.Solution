@@ -10,6 +10,20 @@
 
           <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
             <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            @using (Html.BeginForm("Search","Stylists")) {
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="search" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Search Stylists</label>
+              </div>
+            }
+          </div>
+
+          <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
               <i class="material-icons">face</i>
             </button>
           </div>
@@ -43,20 +57,9 @@
           <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
             <h4>@Html.ActionLink("Add a new client", "Create", "Clients")</h4>
           </div>
+
         </div>
       </div>
     </section>
   </div>
 </main>
-
-
-<div class="button-parent">
-  <div class="button-group">
-  
-  <div class="form-group w-50" id="search">
-  @using (Html.BeginForm("Search","Stylists")) {
-  <input type="text" name="search" class="form-control form-control-lg"/>
-  <br>
-  <input type="submit" value="Search Stylists" class="btn btn-success my-2 my-sm-0">
-  }
-</div>
