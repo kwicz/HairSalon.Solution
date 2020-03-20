@@ -62,7 +62,7 @@ CREATE DATABASE `hair_salon`;
 CREATE TABLE `hair_salon`.`stylists` (
   `stylistid` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
-  `hire_date` DATETIME NULL,
+  `hiredate` DATETIME NULL,
   `speciality` VARCHAR(45) NULL,
   PRIMARY KEY (`stylistid`));
 ```
