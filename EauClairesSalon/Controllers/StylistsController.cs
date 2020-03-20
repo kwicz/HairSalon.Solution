@@ -38,7 +38,7 @@ namespace EauClairesSalon.Controllers
     public ActionResult Details(int id)
     {
       Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
-      thisStylist.Restaurants = _db.Restaurants.Where(restaurant => restaurant.StylistId == id).ToList();
+      thisStylist.Clients = _db.Clients.Where(client => client.StylistId == id).ToList();
       return View(thisStylist);
     }
 
@@ -71,7 +71,7 @@ namespace EauClairesSalon.Controllers
     }
     public ActionResult Search(string search)
     {
-      List<Stylist> model = _db.Stylists.Where(stylist => stylist.Name.Contains(search).ToList();
+      List<Stylist> model = _db.Stylists.Where(stylist => stylist.Name == search).ToList();
       return View(model);
     }
   }

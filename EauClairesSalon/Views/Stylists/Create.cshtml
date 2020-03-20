@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model EauClairesSalon.Models.Stylist
+
+<div class="row">
+  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+    <div class="card bg-information my-5">
+      <div class="card-body">
+        <h4>Add a new stylist</h4>
+        @using (Html.BeginForm())
+        {
+          <div class="form-group">
+            @Html.LabelFor(model => model.Name)
+            @Html.TextBoxFor(model => model.Name, new{ @class="form-control"})
+          </div>  
+          <button type="submit" class="btn btn-light">Add</button>
+        }
+        <br>
+        <p>@Html.ActionLink("Show all stylists", "Index")</p>
+      </div>
+    </div>
+  </div>
+</div>
