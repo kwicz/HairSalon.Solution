@@ -18,7 +18,7 @@ namespace EauClairesSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Restaurant> model = _db.Clients.Include(clients => clients.Stylist).ToList();
+      List<Client> model = _db.Clients.Include(clients => clients.Stylist).ToList();
       return View(model);
     }
 

@@ -17,7 +17,7 @@
           <p>This stylist has no clients.</p>
         }
 
-        @foreach (Client client in @Model.Clients)
+        @* @foreach (Client client in @Model.Clients)
         {
           <p>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</p>
         }
@@ -26,7 +26,7 @@
 
         <p>@Html.ActionLink("Back to List", "Index")</p>
         <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-        <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
+        <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p> *@
       </div>
     </div>
   </div>

@@ -14,16 +14,16 @@ _An MVC web application to help a salon owner manage her employees (stylists) an
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| -------------------:|
-|User can can choose to add a new cuisine| "Mongolian Street Food"| "Mongolian Street Food" is added to the cuisine database|
-|User can view all cuisines|Selects "view all"|All cuisines in the cuisine table of the database are printed to the page|
-|User can view all restaurants of each cuisine|Clicks "Mongolian Street Food"|All restaurants that serve "Mongolian Street Food" are displayed.|
-|User can edit added cuisines|"Mongolian Street Food" --> "Szechuan Street Food"|"Mongolian Street Food" is updated to "Szechuan Street Food" in the cuisine table|
-|User can delete cuisines|User selects "Delete" from options on "Szechuan Street Food" Details page|"Szechuan Street Food" is removed from the cuisines table.|
-|User can add a new restaurant and specify which cuisine it belongs to, as well as other restaurant details.|"Lucky Strike", "Szechuan Street Food"|"Lucky Strike" is added to the restaurants table, with the idea of the specified cuisine in a cuisine column.|
-|User can view all restaurants|Selects "view all"|User can see all restaurants listed in the restaurants table.|
-|User can edit restaurants|"Lucky Strike" --> "Unlucky Cat"|"Lucky Strike" is updated to "Unlucky Cat" in the restaraunt table.|
-|User can delete restaurants|User selects "Delete"|The row with "Unlucky Cat" is removed from the restaurants table.|
-|User can enter a query to search existing cuisines |User enters "Thai"| Search results return a link to Thai cuisine, which then can take the user to all thai restaurants |
+|User can can choose to add a new stylist| "Esme Gigi Genevieve Squalor"| "Esme Gigi Genevieve Squalor" is added to the stylist database|
+|User can view all stylists|Selects "view all"|All stylists in the stylist table of the database are printed to the page|
+|User can view all clients of each stylist|Clicks "Esme Gigi Genevieve Squalor"|All clients that belong to "Esme Gigi Genevieve Squalor" are displayed.|
+|User can edit added stylists|"Esme Gigi Genevieve Squalor" --> "Stefano"|"Esme Gigi Genevieve Squalor" is updated to "Stefano" in the stylist table|
+|User can delete stylists|User selects "Delete" from options on "Stefano" Details page|"Stefano" is removed from the stylists table.|
+|User can add a new client and specify which stylist it belongs to, as well as other client details.|"Miriam "Midge" Maisel", "Stefano"|"Mrs. Maisel" is added to the clients table, with the idea of the specified stylist in a stylist column.|
+|User can view all clients|Selects "view all"|User can see all clients listed in the clients table.|
+|User can edit clients|"Miriam "Midge" Maisel" --> "Susie Myerson"|"Miriam "Midge" Maisel" is updated to "Susie Myerson" in the restaraunt table.|
+|User can delete clients|User selects "Delete"|The row with "Susie Myerson" is removed from the clients table.|
+|User can enter a query to search existing stylists |User enters "Stefano"| Search results return a list of stylists with the term "Stefano"|
 
 
 ## Setup/Installation Requirements
