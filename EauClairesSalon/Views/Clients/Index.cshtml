@@ -4,30 +4,31 @@
 
 @using EauClairesSalon.Models;
 @using System.Collections.Generic;
-@model List<EauClairesSalon.Models.Stylist>;
+@model List<EauClairesSalon.Models.Client>;
+
 
   <div class="row">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
       <div class="card bg-info my-5">
         <div class="card-body">
-          <h1>Stylists</h1>
+          <h1>Clients</h1>
           <hr>
           @if (@Model.Count == 0)
           {
-            <h3>No stylists have been added yet!</h3>
+            <h3>No Clients have been added yet!</h3>
           } 
-            @foreach(Stylist stylist in Model)
+          <ul>
+            @foreach(Client client in Model)
             {
-                <p>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</p>
+                <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
             }
+            <hr>
 
-            <hr/>
-
-            <p>@Html.ActionLink("Add new stylist", "Create")</p>
+            <p>@Html.ActionLink("Add new client", "Create")</p>
 
             <p>@Html.ActionLink("Home", "Index", "Home")</p>
-
-        </div>  
+          </ul>
+        </div>
       </div>
     </div>
-  </div> 
+  </div>        

@@ -3,30 +3,21 @@
 }
 
 @using EauClairesSalon.Models
-@model EauClairesSalon.Models.Stylist
+@model EauClairesSalon.Models.Client
 <div class="row">
   <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-    <div class="card bg-info my-5">
+    <div class="card bg-warning my-5">
       <div class="card-body">
-        <h2>Clients belonging to:</h2>
+        <h2>Client Details</h2>
         <h2>@Html.DisplayFor(model => model.Name)</h2>
-        <hr>
+        <hr />
 
-        @if (Model.Clients.Count == 0)
-        {
-          <p>This stylist has no clients.</p>
-        }
-
-        @foreach (Client client in @Model.Clients)
-        {
-          <p>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</p>
-        }
-
-        <hr/>
+        <p>@Html.DisplayNameFor(model => model.Notes): @Html.DisplayFor(model => model.Notes)<p>
 
         <p>@Html.ActionLink("Back to List", "Index")</p>
-        <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-        <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
+        <p>@Html.ActionLink("Edit This Client", "Edit", new { id = Model.ClientId })</p>
+        <p>@Html.ActionLink("Delete This Client", "Delete", new { id = Model.ClientId })</p>
+
       </div>
     </div>
   </div>
