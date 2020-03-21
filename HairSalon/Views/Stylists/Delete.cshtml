@@ -3,18 +3,21 @@
 }
 
 @model EauClairesSalon.Models.Stylist
-<div class="row">
-  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-    <div class="card bg-info my-5">
-      <div class="card-body">
+
+<br>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text mdl-grid mdl-grid">
         <h2>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</h2>
         @using (Html.BeginForm())
         {
-            <button class="btn btn-light" type="submit">YES</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">YES</button>
         }
         <br>
-        @Html.ActionLink("Back to List", "Index")
+  </div>
+      <div class="mdl-card__actions">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Go back to all stylists", "Index")</button>
       </div>
     </div>
-  </div>
-</div>
+</section>
+<br>
