@@ -11,13 +11,13 @@
         <h2>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?</h2>
         @using (Html.BeginForm())
         {
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">YES</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit">YES</button>
         }
         <br>
-  </div>
-      <div class="mdl-card__actions">
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Go back to all stylists", "Index")</button>
-      </div>
     </div>
+    <div class="mdl-card__actions">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Go back to all stylists", "Index")</button>
+    </div>
+  </div>
 </section>
 <br>
