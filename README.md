@@ -4,7 +4,7 @@
 
 #### By _**K Wicz**_
 
-![Landing Page Preview](/EauClairesSalon/wwwroot/img/splash-page.png)
+![Landing Page Preview](/HairSalon/wwwroot/img/splash-page.png)
 
 ## Description
 
@@ -44,8 +44,8 @@ Enter the command ``dotnet tool install -g dotnet-script`` in Terminal (macOS) o
 Enter the following commands in Terminal (macOS) or PowerShell (Windows):
 ```sh
 cd desktop
-git clone https://github.com/kwicz/EauClairesSalon.Solution
-cd EauClairesSalon.Solution
+git clone https://github.com/kwicz/HairSalon.Solution
+cd HairSalon.Solution
 ```
 
 ### 3. Create Project Database
@@ -93,7 +93,7 @@ _No known bugs at this time._
 
 ## Support and contact details
 
-_Have a bug or an issue with this application? [Open a new issue](https://github.com/kwicz/eauclairessalon.solution/issues) here on GitHub._
+_Have a bug or an issue with this application? [Open a new issue](https://github.com/kwicz/hairsalon.solution/issues) here on GitHub._
 
 ## Technologies Used
 * _C#_
