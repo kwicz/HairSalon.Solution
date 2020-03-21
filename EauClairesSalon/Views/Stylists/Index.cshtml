@@ -18,15 +18,14 @@
       <ul>
         @foreach(Stylist stylist in Model)
         {
+          <hr>
           <li class="mdl-list__item mdl-list__item--three-line">
             <span class="mdl-list__item-primary-content">
               <i class="material-icons  mdl-list__item-avatar">person</i>
               <span>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</span>
               <span class="mdl-list__item-text-body">
-                <p>Hire Date: stylist.HireDate</p>
-              </span>
-              <span class="mdl-list__item-text-body">
-                <p>Speciality: stylist.Speciality</p>
+                <p>Hire Date: @stylist.HireDate, Speciality: @stylist.Speciality</p>
+                <p>Speciality: @stylist.Speciality</p>
               </span>
             </span>
           </li>
