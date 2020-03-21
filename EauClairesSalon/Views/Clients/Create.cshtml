@@ -4,30 +4,33 @@
 
 @model EauClairesSalon.Models.Client
 
-
-<div class="row">
-  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-    <div class="card bg-info my-5">
-      <div class="card-body">
-        <h4>Add a new client</h4>
+<br>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text mdl-grid mdl-grid">
+        <h4 class="mdl-cell mdl-cell--12-col">Add a new client</h4>
         @using (Html.BeginForm())
         {
-          <div class="mdc-text-field">
-            @Html.LabelFor(model => model.Name, new{ @class="mdc-text-field"})
-            @Html.TextBoxFor(model => model.Name, new{ @class="mdc-text-field__input"})
+          <div class="mdl-textfield mdl-js-textfield">
+            @Html.LabelFor(model => model.Name, new { @class="mdl-textfield__label" })
+            @Html.TextBoxFor(model => model.Name, new { @class="mdl-textfield__input" })
           </div>
-          <div class="form-group">
-            @Html.LabelFor(model => model.Notes)
-            @Html.TextBoxFor(model => model.Notes, new{ @class="form-control"})
+          <br>
+          <div class="mdl-textfield mdl-js-textfield">
+            @Html.LabelFor(model => model.Notes, new { @class="mdl-textfield__label" })
+            @Html.TextBoxFor(model => model.Notes, new { @class="mdl-textfield__input" })
           </div>
           <div class="dropdown">
             @Html.LabelFor(model => model.Stylist)
             @Html.DropDownList("StylistId")
           </div>
-
-          <button class="btn btn-light" type="submit">Add</button>
+          <br>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add</button>
         }
+  </div>
+      <div class="mdl-card__actions">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Go back to all stylists", "Index")</button>
       </div>
     </div>
-  </div>
-</div>
+</section>
+<br>

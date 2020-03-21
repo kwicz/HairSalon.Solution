@@ -26,7 +26,7 @@
             @Html.TextBoxFor(model => model.Speciality, new { @class="mdl-textfield__input" })
           </div>
           <br>
-          <button type="submit">Add</button>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add</button>
         }
   </div>
       <div class="mdl-card__actions">
@@ -35,27 +35,3 @@
     </div>
 </section>
 <br>
-
-<div class="row">
-  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-    <div class="card bg-info my-5">
-      <div class="card-body">
-        <h4>Add a new stylist</h4>
-        @using (Html.BeginForm())
-        {
-          <div class="form-group">
-            @Html.LabelFor(model => model.Name)
-            @Html.TextBoxFor(model => model.Name)
-            @Html.LabelFor(model => model.HireDate)
-            @Html.TextBoxFor(model => model.HireDate)
-            @Html.LabelFor(model => model.Speciality)
-            @Html.TextBoxFor(model => model.Speciality)
-          </div>  
-          <button type="submit">Add</button>
-        }
-        <br>
-        <p>@Html.ActionLink("Show all stylists", "Index")</p>
-      </div>
-    </div>
-  </div>
-</div>
