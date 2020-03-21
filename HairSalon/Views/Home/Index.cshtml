@@ -1,0 +1,65 @@
+@{
+  Layout = "_Layout";
+}
+<main class="mdl-layout__content">
+  <div class="mdl-layout__tab-panel is-active" id="overview">
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text mdl-grid mdl-grid">
+          <h4 class="mdl-cell mdl-cell--12-col">Welcome back! What would you like to do today?</h4>
+
+          <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+              <i class="material-icons">search</i>
+            </button>
+          </div>
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            @using (Html.BeginForm("Search","Stylists")) {
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input class="mdl-textfield__input" type="text" name="search" id="sample3">
+                <label class="mdl-textfield__label" for="sample3">Search Stylists</label>
+              </div>
+            }
+          </div>
+
+          <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+              <i class="material-icons">face</i>
+            </button>
+          </div>
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <h4>@Html.ActionLink("Browse through your stylists", "Index", "Stylists")</h4>
+          </div>
+          
+          <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+              <i class="material-icons">add</i>
+            </button>
+          </div>
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <h4>@Html.ActionLink("Add a new stylist", "Create", "Stylists")</h4>
+          </div>
+
+          <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+              <i class="material-icons">face</i>
+            </button>
+          </div>
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <h4>@Html.ActionLink("See all Clients", "Index", "Clients")</h4>
+          </div>
+
+          <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+              <i class="material-icons">add</i>
+            </button>
+          </div>
+          <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <h4>@Html.ActionLink("Add a new client", "Create", "Clients")</h4>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

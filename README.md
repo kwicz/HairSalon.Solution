@@ -56,8 +56,9 @@ mysql -uroot -p<your_password_here>
 * Once in MySQL, create a database for storing project data:
 ```sh
 CREATE DATABASE `k_wicz`;
+USE 'k_wicz';
 ```
-* Create a table in hair_salon for storing stylist data:
+* Create a table in k_wicz for storing stylist data:
 ```sh
 CREATE TABLE `k_wicz`.`stylists` (
   `stylistid` INT NOT NULL AUTO_INCREMENT,
@@ -78,7 +79,7 @@ CREATE TABLE `k_wicz`.`clients` (
 ### 4. Launch the project
 In your terminal, type the following commands to make sure all necessary packages are included in the project and to launch in your browser:
 ```sh
-cd EauClairesSalon
+cd HairSalon
 dotnet restore
 dotnet build
 dotnet watch run

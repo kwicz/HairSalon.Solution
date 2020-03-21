@@ -1,0 +1,37 @@
+@{
+  Layout = "_Layout";
+}
+
+@model EauClairesSalon.Models.Stylist
+
+<br>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text mdl-grid mdl-grid">
+      <h4 class="mdl-cell mdl-cell--12-col">Add a New Stylist</h4>
+        @using (Html.BeginForm())
+        {
+          <div class="mdl-textfield mdl-js-textfield">
+            @Html.LabelFor(model => model.Name, new { @class="mdl-textfield__label" })
+            @Html.TextBoxFor(model => model.Name, new { @class="mdl-textfield__input" })
+          </div>
+          <br>
+          <div class="mdl-textfield mdl-js-textfield">
+            @Html.LabelFor(model => model.HireDate, new { @class="mdl-textfield__label" })
+            @Html.TextBoxFor(model => model.HireDate, new { @class="mdl-textfield__input" })
+          </div>
+          <br>
+          <div class="mdl-textfield mdl-js-textfield">
+            @Html.LabelFor(model => model.Speciality, new { @class="mdl-textfield__label" })
+            @Html.TextBoxFor(model => model.Speciality, new { @class="mdl-textfield__input" })
+          </div>
+          <br>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add</button>
+        }
+  </div>
+      <div class="mdl-card__actions">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Go back to all stylists", "Index")</button>
+      </div>
+    </div>
+</section>
+<br>
