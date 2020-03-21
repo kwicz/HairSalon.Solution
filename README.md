@@ -99,7 +99,8 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _.NET Core 2.2_
 * _ASP.NET Core MVC_
 * _MySQL_
-* _EF Core_
+* _EF Core 2.2.6_
+* _Razor_
 * _Material Lite_
 
 ## License
