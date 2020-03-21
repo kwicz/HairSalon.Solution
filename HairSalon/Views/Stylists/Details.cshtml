@@ -2,8 +2,8 @@
   Layout = "_Layout";
 }
 
-@using EauClairesSalon.Models
-@model EauClairesSalon.Models.Stylist
+@using HairSalon.Models
+@model HairSalon.Models.Stylist
 
 <br>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -26,6 +26,7 @@
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Back to List", "Index")</button>
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Edit This Stylist", "Edit", new { id = Model.StylistId })</button>
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Delete This Stylist", "Delete", new { id = Model.StylistId })</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Add a Client", "Create", "Clients")</button>
     </div>
   </div>
 </section>

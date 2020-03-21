@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace EauClairesSalon.Models
+namespace HairSalon.Models
 {
   public class Client
   {
