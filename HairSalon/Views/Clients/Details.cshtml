@@ -4,21 +4,20 @@
 
 @using EauClairesSalon.Models
 @model EauClairesSalon.Models.Client
-<div class="row">
-  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-    <div class="card bg-warning my-5">
-      <div class="card-body">
-        <h2>Client Details</h2>
-        <h2>@Html.DisplayFor(model => model.Name)</h2>
-        <hr />
 
-        <p>@Html.DisplayNameFor(model => model.Notes): @Html.DisplayFor(model => model.Notes)<p>
-
-        <p>@Html.ActionLink("Back to List", "Index")</p>
-        <p>@Html.ActionLink("Edit This Client", "Edit", new { id = Model.ClientId })</p>
-        <p>@Html.ActionLink("Delete This Client", "Delete", new { id = Model.ClientId })</p>
-
-      </div>
+<br>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text mdl-grid mdl-grid">
+      <h4 class="mdl-cell mdl-cell--12-col">@Html.DisplayFor(model => model.Name)</h4>
+      <hr>
+      <p>@Html.DisplayNameFor(model => model.Notes): @Html.DisplayFor(model => model.Notes)<p>
+    </div>
+    <div class="mdl-card__actions">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Back to List", "Index")</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Edit This Client", "Edit", new { id = Model.ClientId })</button>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Delete This Client", "Delete", new { id = Model.ClientId })</button>
     </div>
   </div>
-</div>
+</section>
+<br>
