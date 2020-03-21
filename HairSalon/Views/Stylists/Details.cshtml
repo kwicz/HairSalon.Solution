@@ -4,31 +4,27 @@
 
 @using EauClairesSalon.Models
 @model EauClairesSalon.Models.Stylist
-<div class="row">
-  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-    <div class="card bg-info my-5">
-      <div class="card-body">
-        <h2>Clients belonging to:</h2>
-        <h2>@Html.DisplayFor(model => model.Name)</h2>
-        <hr>
 
-        @if (Model.Clients.Count == 0)
+<br>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text mdl-grid mdl-grid">
+      <h4 class="mdl-cell mdl-cell--12-col">@Html.DisplayFor(model => model.Name)'s Clients:</h4>
+      <hr>
+      @if (Model.Clients.Count == 0)
+      {
+        <p>This stylist has no clients.</p>
+      }
+      <ul>
+        @foreach (Client client in @Model.Clients)
         {
-          <p>This stylist has no clients.</p>
+          <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
         }
-
-        @* @foreach (Client client in @Model.Clients)
-        {
-          <p>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</p>
-        }
-
-        <hr/>
-
-        <p>@Html.ActionLink("Back to List", "Index")</p>
-        <p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
-        <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p> *@
-            <button class="btn btn-info">@Html.ActionLink("Add a new Client", "Create", "Clients")</button>
-      </div>
+      </ul>
+    </div>
+    <div class="mdl-card__actions">
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">@Html.ActionLink("Back to List", "Index")</button>
     </div>
   </div>
-</div>
+</section>
+<br>
