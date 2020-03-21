@@ -45,14 +45,8 @@ namespace EauClairesSalon.Controllers
     public ActionResult Edit(int id)
     {
       var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
       return View(thisStylist);
-    }
-
-    public ActionResult Edit(Stylist stylist)
-    {
-      _db.Entry(stylist).State = EntityState.Modified;
-      _db.SaveChanges();
-      return RedirectToAction("Index");
     }
 
     public ActionResult Delete(int id)
