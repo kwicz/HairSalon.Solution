@@ -2,7 +2,7 @@
 
 #### _ASP.NET Database Basics Project for Epicodus_, _March 2020_
 
-#### By _**K Wicz**_
+#### By _**K. Wicz**_
 
 ![Landing Page Preview](/HairSalon/wwwroot/img/splash-page.png)
 
