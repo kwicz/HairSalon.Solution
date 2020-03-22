@@ -102,7 +102,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _MySQL_
 * _EF Core 2.2.6_
 * _Razor 2.2.0_
-* _Material Lite_
+* _Material Design Lite_
 
 ## License
 
