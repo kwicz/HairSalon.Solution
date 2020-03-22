@@ -65,7 +65,7 @@ CREATE TABLE `k_wicz`.`stylists` (
   `speciality` VARCHAR(45) NULL,
   PRIMARY KEY (`stylistid`));
 ```
-* Create a table in hair_salon for storing client data:
+* Create a table in k_wicz for storing client data:
 ```sh
 CREATE TABLE `k_wicz`.`clients` (
   `clientid` INT NOT NULL AUTO_INCREMENT,
